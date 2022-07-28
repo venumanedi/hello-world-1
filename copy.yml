@@ -1,8 +1,8 @@
 ---
-- hosts: appserver
+- hosts: webserver
   become: yes
   tasks:
     - name: copy jar/war onto tomcat servers
       copy:
-          src: /var/lib/jenkins/workspace/Hello-world/webapp/target/webapp.war
+          src: /var/lib/jenkins/workspace/hello-world/webapp/target/webapp.war
           dest: /usr/share/tomcat/webapps
